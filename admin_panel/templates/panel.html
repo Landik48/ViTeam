@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block content %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админ панель загрузки файлов</title>
+  <link rel="stylesheet" href="{% static '/css/loginstyle.css' %}" type="text/css">
+
+  <div class="upload-container">
+    <h2>Загрузите файлы в формате .xlsx</h2>
+    <form enctype="multipart/form-data" method="post">
+      <div class="form-group">
+    {% csrf_token %}
+<hr>
+    <h4>Загрузите файл рейтинга лагерников</h4>
+    <p><input type="file" name="personal"></p>
+    <h4>Загрузите файл рейтинга отрядов</h4>
+    <p><input type="file" name="team"></p>
+    <input type="submit" class="btn" name="send" value="Загрузить"/>
+    <input type="submit" class="btn" name="logout" value="Выход"/>
+  </form>
+{% if flag == 'True' %}
+<h5>Данные успешно загружены и обновлены</h5>
+{% endif %}
+{% endblock %}
+      </div>
+    </form>

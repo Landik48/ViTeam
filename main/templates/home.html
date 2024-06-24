@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Главная</title>
+  <link rel="stylesheet" href="{% static '/css/style.css' %}" type="text/css">
+</head>
+<body>
+{% block content %}
+<div class="container1">
+  
+  <header class="header">
+    <h2>ViCamp</h2>
+    <nav class="nav">
+      <ul class="dropdown">
+        <li class="dropdown">
+            <a href="../" style="color: rgb(255, 255, 255)" class="forpc1">Главная</a>
+            <a href="../score_teams" style="color: rgb(255, 255, 255)" class="forpc2">Рейтинг отрядов</a>
+           <a href="../score_personals" style="color: rgb(255, 255, 255)" class="forpc2">Рейтинг лагерников</a>
+           <a href="../contests" style="color: rgb(255, 255, 255)" class="forpc1">Конкурсы</a>
+          <div class="dropdown">
+            <span class="onlphones">Меню</span>
+            <div class="dropdown-content">
+              <a href="../" style="color: black">Главная</a>
+              <a href="../score_teams" style="color: black">Рейтинг отрядов</a>
+              <a href="../score_personals" style="color: black">Рейтинг лагерерников</a>
+              <a href="../contests" style="color: black">Конкурсы</a>
+            </div>
+        </div>
+        </li>
+        </ul>
+     </div>
+    </nav>
+  </header>
+    <div class="intronews">
+      <h2>Добро пожаловать <br> На рейтинги ВДЦ "Океан"</h2>
+    </div>  
+
+  <main class="main">
+
+    <section class="posts">
+      <span>
+        <div class="news">
+          <h3><span class="emoji-highlight">📰</span>Конкурсы</h3>
+          <br>
+          <p>Здесь будут появляться конкурсы лагеря</p>
+          <a href="contests" class="more">Подробнее</a>
+        </div>
+      </span>
+      <span>
+        <div class="post">
+          <h3><span class="emoji-highlight">&#129351;</span> Рейтинг лагеря
+          </h3>
+          <br>
+          <p>Здесь будет рейтинг лагеря</p>
+          <a href="score_personals" class="more">Подробнее</a>
+        </div>
+      
+      </span>
+      <div class="news">
+        <h3><span class="emoji-highlight">&#128203;</span> Рейтинг отрядов</h3>
+        <br>
+        <p>Здесь будет рейтинг отрядов</p>
+        <a href="score_teams" class="more">Подробнее</a>
+      </div>
+     
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024</p>
+  </footer>
+</div>
+{% endblock %}
+</body>
+</html>

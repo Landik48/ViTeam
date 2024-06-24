@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Рейтинг лагерников</title>
+  <link rel="stylesheet" href="{% static '/css/style.css' %}" type="text/css">
+</head>
+<body>
+{% block content %}
+<div class="container1">
+  
+  <header class="header">
+    <h2>ViCamp</h2>
+    <nav class="nav">
+      <ul class="dropdown">
+        <li class="dropdown">
+            <a href="../" style="color: rgb(255, 255, 255)" class="forpc1">Главная</a>
+            <a href="../score_teams" style="color: rgb(255, 255, 255)" class="forpc2">Рейтинг отрядов</a>
+           <a href="../score_personals" style="color: rgb(255, 255, 255)" class="forpc2">Рейтинг лагерников</a>
+           <a href="../contests" style="color: rgb(255, 255, 255)" class="forpc1">Конкурсы</a>
+          <div class="dropdown">
+            <span class="onlphones">Меню</span>
+            <div class="dropdown-content">
+              <a href="../" style="color: black">Главная</a>
+              <a href="../score_teams" style="color: black">Рейтинг отрядов</a>
+              <a href="../score_personals" style="color: black">Рейтинг лагерников</a>
+              <a href="../contests" style="color: black">Конкурсы</a>
+            </div>
+        </div>
+
+        </li>
+        </ul>
+     </div>
+    </nav>
+  </header>
+    <div class="intronews">
+       <h2><span class="emoji-highlight1" >&#129351;</span>Рейтинг лагерников</h2>
+    </div>
+  
+    <hr class="hr">
+  <body>
+  <main class="main1">
+    <section class="posts">
+        <div class="news1">
+        {% for key, value in scores.items %}
+        {% if forloop.counter == 1 %}    
+            <div class="user">
+                <p class="user-name">&#129351; {{key}} - {{value}}</p> <!--1 место-->
+            </div>
+          <hr>
+          {% elif forloop.counter == 2 %}   
+            <div class="user">
+                <p class="user-name">&#129352; {{key}} - {{value}}</p> <!--2 место-->
+            </div>
+          <hr>
+          {% elif forloop.counter == 3 %}
+            <div class="user">
+                <p class="user-name">&#129353; {{key}} - {{value}}</p> <!--3 место-->
+            </div>
+          <hr>
+          {% else %}
+            <div class="user">
+                <p class="user-name">&#128220; <b><i>{{ forloop.counter }}</i></b>  {{key}} - {{value}}</p></p> <!--4 место и ниже-->
+            </div>
+            <hr>
+          {% endif %}
+         {% endfor %}
+        </div>
+    </section>
+
+  </main>
+       
+  <footer class="footer">
+    <p>&copy; 2024</p>
+  </footer>
+</div>
+{% endblock %}
+</body>
+</html>

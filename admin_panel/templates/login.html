@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авторизация</title>
+  <link rel="stylesheet" href="{% static '/css/loginstyle.css' %}" type="text/css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Авторизация</h2>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="username">Имя пользователя</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" >
+        <input type="submit" class = "btn" value="Вход"/>
+        
+{% if flag == 'True' %}
+<h5 class="err">Неправильный логин или пароль</h5>
+{% endif %}
+      </div>
+    </form>
+  </div>
+</body>
+</html>

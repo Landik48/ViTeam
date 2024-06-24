@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Конкурсы</title>
+  <link rel="stylesheet" href="{% static '/css/style.css' %}" type="text/css">
+</head>
+<body>
+{% block content %}
+<div class="container1">
+  
+  <header class="header">
+    <h2>ViCamp</h2>
+    <nav class="nav">
+      <ul class="dropdown">
+        <li class="dropdown">
+            <a href="../" style="color: rgb(255, 255, 255)" class="forpc1">Главная</a>
+            <a href="../score_teams" style="color: rgb(255, 255, 255)" class="forpc2">Рейтинг отрядов</a>
+           <a href="../score_personals" style="color: rgb(255, 255, 255)" class="forpc2">Рейтинг лагерников</a>
+           <a href="../contests" style="color: rgb(255, 255, 255)" class="forpc1">Конкурсы</a>
+          <div class="dropdown">
+            <span class="onlphones">Меню</span>
+            <div class="dropdown-content">
+              <a href="../" style="color: black">Главная</a>
+              <a href="../score_teams" style="color: black">Рейтинг отрядов</a>
+               <a href="../score_personals" style="color: black">Рейтинг лагерников</a>
+              <a href="../contests" style="color: black">Конкурсы</a>
+            </div>
+        </div>
+
+        </li>
+        </ul>
+     </div>
+    </nav>
+  </header>
+    <div class="intronews">
+      <h2><font face="Verdana" class="emoji-highlight1" style="margin-botton: 10px;">📰</font>Конкурсы</h2>
+    </div>  
+  <hr class="hr">
+  <main class="main">
+    {% for key, value in scores.items %}
+    <section class="posts">
+      <span>
+        <div class="news">
+          <h3><span class="emoji-highlight">	&#129534;</span>{{key}}</h3>
+          <br>
+          <p><b>{{value.1}}</b></p>
+<br>
+          <p>{{value.0}}</p>
+        </div>
+      </span>
+      {% endfor %}
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024</p>
+  </footer>
+</div>
+
+{% endblock %}
+</body>
+</html>

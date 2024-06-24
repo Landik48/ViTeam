@@ -1,0 +1,356 @@
+* { 
+    margin: 0; 
+    box-sizing: border-box; 
+    background-size: 100%;
+  } 
+
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  body { 
+    font-family: Arial, sans-serif; 
+    border-radius: 20px;
+    background: rgb(194,226,207);
+    height: 100vh;
+    background: linear-gradient(-30deg, rgba(194,226,207,1) 1%, rgba(216,226,220,1) 48%, rgba(255,202,212,1) 100%);
+  } 
+
+  .forpc1{
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .forpc2{
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .dropdown { 
+    position: relative; 
+    display: inline-block; 
+    
+  } 
+
+
+   @keyframes fade{
+     from{
+       opacity: 0
+     }
+     to{
+       opacity: 1
+     }
+   }
+
+
+
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideMeny{
+        0% { transform: translateY(-20px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+    }
+   
+  .dropdown:hover .dropdown-content { 
+    display: block; 
+  } 
+
+  .container1 { 
+    margin: 0 auto; 
+    padding-top: 20px;
+    border-radius: 20px; 
+    margin-left: 25px;
+    margin-right: 25px;
+    
+  } 
+  
+  .header { 
+    background-color: linear-gradient(90deg, #533E85, #ED5EDD);
+    color: #fff; 
+    background: linear-gradient(130deg, #533E85, #ED5EDD);
+    padding: 20px;
+    display: flex; 
+    border-radius: 20px;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 25px;
+  } 
+
+  .intronews{
+    justify-content: space-between; 
+    align-items: center;
+    display: flex;
+    margin-top: 25px; 
+    margin-bottom: 25px; 
+    padding: 20px; 
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 20px; 
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    animation: slideMeny 1.8s;
+  }
+   
+  .header h1 { 
+    font-size: 24px; 
+    padding-bottom: 10px; 
+    
+  } 
+   
+  .hr{
+    margin-left: 35px;
+    margin-right: 35px;
+    animation: slideMeny 1s;
+  }
+  .nav ul { 
+    list-style-type: none; 
+  } 
+   
+  .nav ul li { 
+    display: inline; 
+    margin-right: 2px; 
+    margin-left: 2px; 
+  } 
+   
+  .nav ul li a { 
+    color: #fff; 
+    text-decoration: none; 
+  } 
+   
+  .main { 
+    display: flex; 
+    margin-bottom: 10px; 
+  } 
+   
+  .posts { 
+    flex-grow: 2; 
+  } 
+  .news1 { 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 20px; 
+    border-radius: 20px; 
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    animation: slideMeny 1s
+;
+
+    
+  } 
+   
+  .post { 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    padding: 20px; 
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 20px; 
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    animation: slideInFromRight 1s
+;
+
+    
+  } 
+  .news { 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 20px; 
+    border-radius: 20px; 
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    animation: slideInFromLeft 1s
+;
+  }
+
+  .emoji-highlight1 {
+    
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: lightblue;
+  }
+
+  
+  .user { 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    animation: fade 1.8s;
+  } 
+        @keyframes fade{
+     from{
+       opacity: 0
+     }
+     to{
+       opacity: 1
+     }
+   }
+   @media only screen and (min-width: 768px) {
+    /* стили для компьютеров */
+    .onlphones{
+        opacity: 0;
+        display: none;
+    }
+    .dropdown-content{
+        display: none;
+    }
+    .dropdown-content a {
+        display: none;
+    }
+
+  }
+  
+  @media only screen and (max-width: 767px) {
+    /* стили для мобильных телефонов */
+    .forpc1{
+        opacity: 0;
+        display: none;
+    }
+    .forpc2{
+        opacity: 0;
+        display: none;
+    }
+    
+    .dropdown-content {
+        margin-top: 30px; 
+        display: none; 
+        position: absolute; 
+        background: linear-gradient(-30deg, rgba(194,226,207,1) 10%, rgba(216,226,220,1) 48%, rgba(255,202,212,1) 79%);
+        background-color: #f9f9f9; 
+        min-width: 160px; 
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        z-index: 1; 
+        border-radius: 10px; 
+        right: 0; 
+        animation: slideMeny 0.3s, fade 0.5s;
+    }
+    .dropdown-content a { 
+        color: black; 
+        padding: 12px 16px; 
+        text-decoration: none; 
+        display: block; 
+        transition: background-color 0.3s; 
+    }
+  } 
+
+  @keyframes sizer{
+    from{
+      
+      height: 5%
+    }
+    to{
+      
+      height: 87.5%;
+    }
+  }
+  .user-statistics { 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    flex-basis: 100%; 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 20px; 
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    animation:  sizer 0.8s, slideMeny 3s;
+    
+  } 
+  .post img { 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+  } 
+  .sidebar { 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    flex-basis: 25%; 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 20px; 
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  } 
+   
+  .sidebar h2 { 
+    margin-bottom: 10px; 
+  } 
+   
+  .sidebar ul li {
+    margin-bottom: 10px; 
+    display: flex; 
+    align-items: center; 
+  } 
+   
+  .intro{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .sidebar ul li img { 
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+  } 
+    .emoji-highlight {
+      margin-bottom: 15px;
+      display: inline-block;
+      padding: 5px;
+      border-radius: 50%;
+      margin-right: 5px;
+      background-color: lightblue;
+    }
+.more {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: lightgrey;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.more:active {
+    background-color: white;
+    border-radius: 20px; 
+}
+   
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  .footer { 
+    margin-top: 20px; 
+    background: linear-gradient(130deg, #533E85, #ED5EDD); 
+    border-radius: 20px;
+    color: #fff; 
+    text-align: center; 
+    padding: 10px 0; 
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px; 
+  }
